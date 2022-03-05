@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #222;
+}
+
+body{
+    color: white;
+    text-align: center;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;   
+    cursor: pointer;
+}
+.title h1{
+    position: relative;
+    top: 100px;
+}
+
+.title h1::after{
+    content: '';
+    width: 100px;
+    height: 5px;
+    background-color: crimson;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50px;
+    left: 50%;
+}
+
+.card-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+    
+    
+}
+
+.card{
+    width: 20%;
+    height: 25%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: grey 2px solid;
+    position: relative;
+    transition: 0.4s;
+
+
+}
+
+.card .inner-card{
+
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: lightgray;
+    transition: 0.4s;
+    background-color:#222;
+}
+
+.inner-card span{
+    display: inline-block;
+    width: 80px;
+    height:80px ;
+    line-height: 80px;
+    font-size: 70px;
+
+}
+.inner-card h2{
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
+   
+}
+.card p{
+    font-size: 17px;
+    color: gray;
+    text-align: justify;
+    word-break: break-all;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 80%;
+    text-align-last: center ;
+    margin-top: 100px;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+       
+}
+
+.card:hover{
+    border-color:crimson ;
+    transition: 0.4s;
+}
+
+.card:hover .inner-card{
+    margin-top: -90px;
+    color: crimson;
+    transition: 0.4s;
+
+}
+
+.card:hover p{
+    bottom: 80px;
+    opacity: 1;
+    transition: .4s;
+    transition-delay: .3s;
+}

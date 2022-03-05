@@ -1,0 +1,200 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.package{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.package-container{
+ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.package-container .package-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
+}
+
+.package-card{
+    width: 28rem;
+    height: 25rem;
+    background-color: white;
+    transition: .5s;
+    box-shadow: 1px 3px 2rem rgba(49,24,131,0.9);
+
+}
+
+.card-head{
+    height: 16rem;
+    position: relative;
+  
+}
+
+.package-card:nth-child(1) .card-head{
+    background:linear-gradient(135deg, rgba(49,24,131,0.8) 0%, rgba(72,56,149,0.8) 100%) ,url(./images/jungle.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.package-card:nth-child(2) .card-head{
+    background:linear-gradient(135deg, rgba(49,24,131,0.8) 0%, rgba(72,56,149,0.8) 100%) ,url(./images/sea.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.package-card:nth-child(3) .card-head{
+    background:linear-gradient(135deg, rgba(49,24,131,0.8) 0%, rgba(72,56,149,0.8) 100%) ,url(./images/snow.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-head h3{
+    font-size: 1.7rem;
+    color: whitesmoke;
+    background-color: rgba(49,24,131,0.7);
+    width: 12rem;
+    text-align: center;
+    bottom: 2rem;
+    right: 4rem;
+    position:absolute;
+    padding: .8rem;
+    border: 2px solid tomato ;
+    border-bottom-left-radius:2rem ;
+    border-top-right-radius:1rem ;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-head:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    height: 5rem;
+    background: url(./images/wave-large.png) center no-repeat;
+    background-size: cover;
+
+}
+
+.card-body{
+    height: 0rem;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: .5s;
+ 
+}
+
+
+.card-body li{
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    width: 15rem;
+    text-align: center;
+    opacity: 0;
+    transition: .2s;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #602af5 0%, #009efd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.card-footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 10rem;
+
+}
+
+.package-card:nth-child(1) .card-footer{
+    background:linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%) ,url(./images/jungle.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.package-card:nth-child(2) .card-footer{
+    background:linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%) ,url(./images/sea.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.package-card:nth-child(3) .card-footer{
+    background:linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%) ,url(./images/snow.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+.card-footer::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 4rem;
+    background: url(./images/wave-large-reversed.png) center no-repeat;
+    background-size: cover;
+
+}
+
+.card-footer .btn{
+top: 28%;
+left: 29%;
+height: 4rem;
+width: 11.5rem;
+font-size: 1.3rem;
+text-align: center;
+transform: translate(-50%, -50%);
+position: absolute;
+text-transform: uppercase;
+letter-spacing: 2px;
+transition: .5s;
+background-color: rgba(49,24,131,0.9);
+border-top-left-radius:1rem ;
+border-bottom-right-radius:2rem ;
+}
+a{
+    text-decoration: none;
+	color: white;
+	text-align: center;
+	padding-top: 1rem;
+}
+
+
+.card-footer .btn:hover{
+    background-color: tomato;
+}
+
+.package-card:hover {
+    height: 48rem;
+}
+
+.package-card:hover .card-body{
+    height: 22rem;
+    opacity: 1;
+}
+
+.package-card:hover .card-body li{
+   
+    opacity: 1;
+    transition-delay: .5s;
+}
