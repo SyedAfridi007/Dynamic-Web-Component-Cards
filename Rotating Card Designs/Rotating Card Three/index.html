@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<div class="container">
+  <div class="card">
+    <p class="back"> Back </p>
+
+        <h3 class="headline">Flippin' Cards</h3>
+        <p class="description">A simple example of a card with flip animations using CSS and JS</p>
+        <div class="btn flip">Flip</div>
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(".flip").on("click", flip);
+$(".back").on("click", back);
+
+function back() {
+  $(".card").removeClass("cardFlipped");
+  $(".flip")
+    .delay(200)
+    .fadeIn("fast");
+}
+
+function flip() {
+  $(".card").addClass("cardFlipped");
+  $(".flip").fadeOut("fast");
+}
+</script>
+  </body>
+</html>

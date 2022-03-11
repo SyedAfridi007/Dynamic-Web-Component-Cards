@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  height: 100vh;
+
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  width: 20rem;
+  height: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card_side {
+  height: 28rem;
+  transition: all 0.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card_side-front {
+  background-color: #fff;
+}
+.card_side-back {
+  transform: rotateY(180deg);
+}
+.card_side-back-1 {
+  background-image: linear-gradient(to right bottom, #0db4b9, #0a9094);
+}
+.card:hover .card_side-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card_side-back {
+  transform: rotateY(0);
+}
+.card_picture {
+  background-size: cover;
+  height: 13rem;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.card_picture-1 {
+  background-image: linear-gradient(to right bottom, #0db4b9, #0a9094),
+    url(https://alexcorvin.design/img/img3.jpg);
+}
+.card_heading {
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 6.8rem;
+  right: 1rem;
+  width: 55%;
+  height: 25%;  
+}
+.card_heading-span {
+  padding: .4rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+}
+.card_heading-span-1 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(13, 180, 185, 0.85),
+    rgba(10, 144, 148, 0.85)
+  );
+}
+
+.card_details ul {
+  list-style: none;
+  width: 60%;
+  margin: 0 auto;
+}
+.card_details ul li {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.card_details ul li:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+.card_flip {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+.card_back-box {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 6rem;
+}
+.card_back-title {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.5rem;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn:active::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}

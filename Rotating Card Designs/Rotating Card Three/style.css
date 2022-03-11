@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+.container .card {
+  background-color: #a8d8f0;
+  width: 420px;
+  min-height: 270px;
+  border-radius: 8px;
+  box-shadow: 26px 33px 121px 0px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  transition: all 0.5s ease;
+}
+.container .card.cardFlipped {
+  transform: rotateY(180deg) translateZ(-70px);
+  min-height: 400px;
+  width: 300px;
+}
+.container .card.cardFlipped .back {
+  display: block;
+  margin-left: -15px;
+}
+.container .card.cardFlipped .description {
+  font-weight: bold;
+  width: 240px;
+  float: right;
+}
+.container .card.cardFlipped h3,
+.container .card.cardFlipped p,
+.container .card.cardFlipped .flip {
+  transform: rotateY(180deg);
+}
+.container .card h3 {
+  color: #ff8f57;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+.container .card p {
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+}
+.container .card p.back {
+  display: none;
+  color: #ff8f57;
+  cursor: pointer;
+}
+.container .card p.back:hover {
+  opacity: 1;
+}
+.container .card .btn {
+  display: inline-block;
+  user-select: none;
+  position: absolute;
+  bottom: 0;
+  padding: 25px;
+  width: 50%;
+  text-align: center;
+  background: #78c0f0;
+  font-size: 11px;
+  color: #ff8f57;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.2s ease;
+}
+.container .card .btn:hover {
+  color: #ffcd57;
+  background-color: #4890c0;
+}
+.container .card .btn.flip {
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
